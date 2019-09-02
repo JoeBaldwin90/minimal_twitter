@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require_tweets.css
+ *= require_tweets.scss
+ *= require_svg.css
 */

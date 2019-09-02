@@ -1,26 +1,36 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
-
 /* ----- Reset ----- */
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:after,
+*:before {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -29,7 +39,6 @@ img {
   height: auto;
 }
 /* ----- ----- ----- */
-
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -37,18 +46,19 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
-h1, p {
+h1,
+p {
   margin: 0;
 }
 
 a {
- text-decoration: none;
- color: #0074D9;
- transition: color 0.1s;
+  text-decoration: none;
+  color: #0074D9;
+  transition: color 0.1s;
 
- &:hover {
-   color: #7FDBFF;
- }
+  &:hover {
+    color: #7FDBFF;
+  }
 }
 
 header {
@@ -98,9 +108,11 @@ header {
   margin-bottom: 0.5em;
   display: flex;
   align-items: center;
+
   p {
     margin-left: 0.5em;
   }
+
   img {
     border-radius: 100%;
   }
@@ -112,4 +124,9 @@ header {
   font-weight: 300;
   color: #333;
   margin-top: 0.5em;
+}
+
+.svg {
+  text-align: right;
+  padding: 50px 150px 0 0;
 }
