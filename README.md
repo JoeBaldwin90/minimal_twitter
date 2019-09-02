@@ -1,24 +1,29 @@
-# README
+# Minimal Twitter
+Minimal Twitter is a Rails application which displays a logged-in user's tweets in a clean, stylish way. [Try it out yourself!](https://obscure-cove-69098.herokuapp.com/).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Goal
+To create an application that allows users to "sign-in with Twitter".  
 
-Things you may want to cover:
+#### Timeframe
+Two days
 
-* Ruby version
+## Features
+- User log-in with [Omniauth](https://github.com/omniauth/omniauth) and [Omniauth-twitter](https://github.com/arunagw/omniauth-twitter).
+- Pulling in Twitter API data with the [Twitter](https://github.com/sferik/twitter) gem.
 
-* System dependencies
+## Technologies used
+- Ruby on Rails
+- Rails credentials
+- Sessions
+- Git / GitHub
+- Heroku
+- Twitter for developers
+- Omniauth (gem)
+- Omniauth-twitter (gem)
+- Twitter (gem)
 
-* Configuration
+## Logging in
+Anyone with a Twitter account can use this app.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## App overview
+When a new session is created by clicking "Log in with Twitter", the user's auth token and secret is stored from the "OmniAuth AuthHash" that is returned by `request.env['omniauth.auth']`. This data is then passed into the configuration options that are needed to pull user's data from Twitter's API. Once authorised, this app utilises the user's API data returned by the `client.home_timeline` method to display their tweet history. E.g. `<%= tweet.retweet_count %>`

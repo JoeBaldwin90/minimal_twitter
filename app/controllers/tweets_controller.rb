@@ -10,12 +10,14 @@ class TweetsController < ApplicationController
       end
 
       @tweets = client.home_timeline
+      # puts @tweets.to_json
 
     end
   end
 
   def login
     @response = request.env['omniauth.auth']
+    # puts @response.to_json
     session[:username] = @response[:info][:nickname]
     session[:token] = @response[:credentials][:token]
     session[:token_secret] = @response[:credentials][:secret]
