@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter, "OuyD2ohfHuUDfpA0BJoVNj2fL", "uJbKjucwV0kEaiMaskpWOsOmlOM62ArRquH9dxaDG2T7by6zii",
+  provider :twitter, Rails.application.credentials.twitter_token, Rails.application.credentials.twitter_token_secret,
     {
       :secure_image_url => 'true',
       :image_size => 'original',
