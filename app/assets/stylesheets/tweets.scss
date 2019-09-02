@@ -43,11 +43,11 @@ h1, p {
 
 a {
  text-decoration: none;
- color: #7FDBFF;
+ color: #0074D9;
  transition: color 0.1s;
 
  &:hover {
-   color: #0074D9;
+   color: #7FDBFF;
  }
 }
 
@@ -58,6 +58,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .header-stripe {
+    background: linear-gradient(to right, #7fdbff 0%,#0074d9 100%,#0074d9 100%);
+    height: 2px;
   }
 
   nav {
