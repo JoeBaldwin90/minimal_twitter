@@ -87,13 +87,13 @@ header {
 }
 
 .container {
-  max-width: 60vw;
+  max-width: 750px;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 .tweet {
-  border: 2px dotted #444;
-  border-radius: 10px;
+  border-bottom: 1px dashed #333;
   padding: 1em;
   margin-top: 1em;
   text-align: left;
