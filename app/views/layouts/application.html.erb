@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minimal Twitter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header">
+        <h1>Minimal Twitter</h1>
+        <nav>
+          <% if session[:token].present? %>
+            <ul>
+              <li>Welcome <b><%= session[:username] %></b>!</li>
+              <li><a href="/logout">Log out</a></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li><a href="/auth/twitter">Log in with Twitter</a></li>
+            </ul>
+          <% end %>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container ">
+      <%= yield %>
+    </section>
+  </body>
+</html>

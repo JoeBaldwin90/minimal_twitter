@@ -1,0 +1,14 @@
+<% if session[:token].present? %>
+
+    <% @tweets.each do |tweet| %>
+      <div class="tweet">
+        <div class="user-details">
+          <img src="<%= tweet.user.profile_image_uri_https %>" alt="profile picture">
+          <p class="username"><%= tweet.user.name %></p>
+        </div>
+        <h1><%= auto_link(tweet.text).html_safe %></h1>
+        <p class="small-text">Retweeted <%= tweet.retweet_count %> times.</p>
+      </div>
+    <% end %>
+
+<% end %>
